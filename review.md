@@ -13,34 +13,44 @@
 ```html
 <form action="store.php" method="post">
     <input type="text" name="id" value="123">
-		<textarea　name="content">焼肉</textarea>
+    <textarea　name="content">焼肉</textarea>
     <button type="submit">送信</button>
 </form>
 ```
+連想配列にcontentキーの焼肉valueが格納される。
 
 ### `require_once()` は何のために記述しているか説明してください。
-
+指定したファイルを読み込むことと既に読み込まれているか確認する。
 ### `savePostedData($post)`は何をしているか説明してください。
 
+
 ### `header('location: ./index.php')`は何をしているか説明してください。
+ヘッダー関数によってHTTPヘッダーを設定することができ、locationヘッダーを指定することにより指定したURLをリダイレクトすることができる。
 
 ### `getRefererPath()`は何をしているか説明してください。
 
 ### `connectPdo()` の返り値は何か、またこの記述は何をするための記述か説明してください。
+PDOクラスをインスタンス化したオブジェクトを返す。
+PDOクラスをインスタンス化し例外処理を実装することでDBとの接続をするための関数。
 
 ### `try catch`とは何か説明してください。
-
+例外処理を実装するための構文となっており、tryの中に例外が発生しそうな処理を記載し、catchの中に例外が発生した場合の処理を記載する文。
 ### Pdoクラスをインスタンス化する際に`try catch`が必要な理由を説明してください。
+PDOクラスをインスタンス化しDBと接続する際に例外が発生する度にアプリケーションがクラッシュすることを防ぐため、
+Try-catch文を用いて例外が発生した際の処理を記載することにより例外時も問題なく動くシステムにするために必要。
 
 ## 新規作成
 
 ### `createTodoData($post)`は何をしているか説明してください。
+POSTされた値を連想配列のCONTENTキーのvalueに格納する
 
 ## 一覧
 
 ### `getTodoList()`の返り値について説明してください。
+getAllRecords関数によってデータベースに処理の結果、レコードに残っている全ての行を含む配列をを返す。
 
 ### `<?= ?>`は何の省略形か説明してください。
+PHPのechoの省略形になっており、HTMLとPHPが混在している時にこの記述方法が使える。
 
 ## 更新
 
